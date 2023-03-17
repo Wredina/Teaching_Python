@@ -7,14 +7,15 @@
 # Input: 20 21 22(ввод чисел НЕ в одну строку)
 # Output: 32
 
-
-# import math
-
 klassA = int(input('Количество учащихся в классе А: '))
 klassB = int(input('Количество учащихся в классе B: '))
 klassC = int(input('Количество учащихся в классе C: '))
+if klassA % 2 != 0:
+    klassA += 1
+if klassB % 2 != 0:
+    klassB += 1
+if klassC % 2 != 0:
+    klassC += 1
 total_students = klassA + klassB + klassC
-print(f"{total_students} - студентов")
-# total_desks = math.ceil(total_students / 2)
-total_desks = (total_students) // 2
+total_desks = total_students // 2
 print(f"{total_desks} - нужно парт")
