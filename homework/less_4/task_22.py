@@ -34,4 +34,4 @@ print(*user_set_1)
 user_set_2 = set(randint(1, 10) for num_2 in range(user_size_set_2))
 print(*user_set_2)
 
-print(*user_set_1.union(user_set_2))
+print(*user_set_1.intersection(user_set_2))
