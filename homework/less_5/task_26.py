@@ -10,13 +10,13 @@ from random import randint
 
 
 def exp(num_A, num_B):
-    if num_B == 1 or num_A == 1:
-        return num_A
+    if num_B == 0 or num_A == 1:
+        return 1
     else:
         return num_A * exp(num_A, num_B - 1)
 
 
-a = 3
-b = 5
+a = 2
+b = 0
 print(a, b)
 print(exp(a, b))

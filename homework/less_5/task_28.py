@@ -11,6 +11,8 @@ from random import randint
 def num_sum(a, b):
     if a == 0:
         return b
+    elif b == 0:
+        return a
     return num_sum(a - 1, b+1)
 
 
