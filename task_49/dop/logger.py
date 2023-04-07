@@ -36,7 +36,7 @@ def dell_user():
 
 
 def change_user():
-    what_change = input('''что хоти изменить:
+    num_change = input('''что хоти изменить:
 1 - фамилию
 2 - имя
 3 - отчество
@@ -49,33 +49,10 @@ def change_user():
         with open('D:\программирование\Обучение_тестировщик\Less_1\знакомство_с_Python\\task_49\\tel.txt', 'w', encoding='utf-8') as take_info:
             for line in text_data:
                 if user in line:
-                    #     new_info = line.replace(user, new_iformation)
-                    #     take_info.writelines(new_info)
-                    # else:
-                    #     take_info.writelines(line)
                     line = list(line.split())
-                    if what_change == '1':
-                        line.pop(0)
-                        line.insert(0, new_iformation)
-                        line = ' '.join(line)
-                        take_info.writelines(line + '\n')
-                    elif what_change == '2':
-                        line.pop(1)
-                        line.insert(1, new_iformation)
-                        line = ' '.join(line)
-                        take_info.writelines(line + '\n')
-                    elif what_change == '3':
-                        line.pop(2)
-                        line.insert(2, new_iformation)
-                        line = ' '.join(line)
-                        take_info.writelines(line + '\n')
-                    elif what_change == '4':
-                        line.pop(3)
-                        line.insert(3, new_iformation)
-                        line = ' '.join(line)
-                        take_info.writelines(line + '\n')
-                    else:
-                        print('ввели не коректные данные')
-                        sleep(5)
+                    line.pop(int(num_change) - 1)
+                    line.insert(int(num_change) - 1, new_iformation)
+                    line = ' '.join(line)
+                    take_info.writelines(line + '\n')
                 else:
                     take_info.writelines(line)

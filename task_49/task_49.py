@@ -25,12 +25,12 @@
 import os
 
 
-# def info_user_write():
-#     full_name_phone = list(
-#         [input('напишите своё ФИО и номер телефона через пробел: '), '\n'])
-#     take_info = open('task_49\\tel.txt', 'a', encoding='utf-8')
-#     take_info.writelines(full_name_phone)
-#     take_info.close()
+def info_user_write():
+    full_name_phone = list(
+        [input('напишите своё ФИО и номер телефона через пробел: '), '\n'])
+    take_info = open('task_49\\tel.txt', 'a', encoding='utf-8')
+    take_info.writelines(full_name_phone)
+    take_info.close()
 
 
 def read_user_info():
